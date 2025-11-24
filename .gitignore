@@ -1,0 +1,39 @@
+# --- Flink & Maven Standard ---
+target/
+*.jar
+*.war
+*.ear
+dependency-reduced-pom.xml
+
+# --- IDEs (IntelliJ IDEA / Eclipse / VS Code) ---
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.ipr
+*.iws
+
+# --- Flink Runtime Artifacts (CRÍTICO para no subir basura de la demo) ---
+# Ignorar los logs generados por los TaskManagers/JobManager
+log/
+*.log
+*.out
+*.err
+
+# Ignorar carpetas de datos temporales de Flink (Checkpoints/Savepoints locales)
+# Según nuestra demo, usamos /tmp/flink-checkpoints-demo, pero a veces
+# se generan carpetas temporales en la raíz si no se configura ruta absoluta.
+flink-checkpoints*/
+flink-savepoints*/
+/tmp/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Credenciales y Secretos (Seguridad) ---
+# Nunca subir configuraciones con passwords reales
+conf/flink-conf.yaml
+*.properties
