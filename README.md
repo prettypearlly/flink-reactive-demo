@@ -15,7 +15,7 @@ Sistema de detección de desastres en tiempo real migrado a Apache Flink 2.1. De
 
 ---
 
-## 🛠️ Requisitos Previos
+## Requisitos Previos
 
 Para ejecutar esta demostración necesita:
 
